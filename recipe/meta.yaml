@@ -14,7 +14,7 @@ build:
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
   script: {{ PYTHON }} -m pip install . -vv 
-  number: 0
+  number: 1
   skip: true  # [py<310]
 
 requirements:
