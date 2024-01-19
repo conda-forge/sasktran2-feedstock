@@ -66,7 +66,7 @@ test:
 
 about:
   summary: The SASKTRAN radiative transfer model Version 2
-  license: LicenseRef-SASKTRAN2
+  license: MIT
   license_file: license.md
   doc_url: https://sasktran2.readthedocs.io/
   home: https://github.com/usask-arg/sasktran2
