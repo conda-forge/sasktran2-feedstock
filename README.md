@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sasktran2-feeds
 
 Home: https://github.com/usask-arg/sasktran2
 
-Package license: LicenseRef-SASKTRAN2
+Package license: MIT
 
 Summary: The SASKTRAN radiative transfer model Version 2
 
