@@ -13,7 +13,7 @@ build:
   binary_relocation: true
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
-    - DO_STREAM_TEMPLATES=ON # [not win]
+    - DO_STREAM_TEMPLATES=ON  # [not win]
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
   skip: true  # [py<310]
