@@ -14,7 +14,7 @@ build:
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
     - DO_STREAM_TEMPLATES=ON  # [not win]
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vvv --config-settings=cmake.verbose=true
   number: 1
   skip: true  # [py<310]
 

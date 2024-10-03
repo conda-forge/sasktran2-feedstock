@@ -35,7 +35,7 @@ python:
 spdlog:
 - '1.14'
 target_platform:
-- linux-64
+- linux-ppc64le
 zip_keys:
 - - c_stdlib_version
   - cdt_name
