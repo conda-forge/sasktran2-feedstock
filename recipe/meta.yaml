@@ -54,7 +54,6 @@ requirements:
     - appdirs
     - pyyaml
     - xarray
-    - dask
     - netcdf4
     - scipy
 
