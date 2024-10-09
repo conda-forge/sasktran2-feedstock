@@ -25,13 +25,12 @@ requirements:
     - pybind11                               # [build_platform != target_platform]
     - cmake >=3.5
     - make  # [not win]
-    - python  # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}  # [build_platform != target_platform]
     - {{ compiler('cxx') }}
     - {{ compiler('fortran') }}  # [not win]
     - {{ stdlib("c") }}    # [not win]
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
+    - crossenv <=1.4.0 # [build_platform != target_platform]
   host:
     - python
     - pip
@@ -61,7 +60,7 @@ test:
   imports:
     - sasktran2
   commands:
-    - pip check  # [build_platform == target_platform]
+    - pip check
   requires:
     - pip
 
