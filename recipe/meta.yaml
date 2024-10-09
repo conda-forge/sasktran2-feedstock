@@ -30,7 +30,7 @@ requirements:
     - {{ stdlib("c") }}    # [not win]
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
-    - crossenv <=1.4.0 # [build_platform != target_platform]
+    - crossenv <=1.4.0  # [build_platform != target_platform]
   host:
     - python
     - pip
