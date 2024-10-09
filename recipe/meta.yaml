@@ -61,7 +61,7 @@ test:
   imports:
     - sasktran2
   commands:
-    - pip check
+    - pip check  # [build_platform == target_platform]
   requires:
     - pip
 
