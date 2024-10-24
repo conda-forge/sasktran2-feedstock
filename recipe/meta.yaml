@@ -1,5 +1,5 @@
 {% set name = "sasktran2" %}
-{% set version = "2024.10.0" %}
+{% set version = "2024.10.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/usask-arg/sasktran2/archive/v{{ version }}.tar.gz
-  sha256: 545dcda15f74b66f6880dee0561c0ad0f1c545cacd0ca5d04e84af19aec04594
+  sha256: 572e333e2cfa7edc766fa60b86893cc119621d3bdf437f4655a41f4ad4455095
 
 build:
   binary_relocation: true
@@ -15,7 +15,7 @@ build:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
     - DO_STREAM_TEMPLATES=ON  # [not win]
   script: {{ PYTHON }} -m pip install . -vvv --config-settings=cmake.verbose=true
-  number: 1
+  number: 0
   skip: true  # [py<310]
 
 requirements:
