@@ -1,5 +1,5 @@
 {% set name = "sasktran2" %}
-{% set version = "2024.10.2" %}
+{% set version = "2024.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/usask-arg/sasktran2/archive/v{{ version }}.tar.gz
-  sha256: a962deb4facd1605f337507505cc2d3653780cac685b1382be19070ef75999a1
+  sha256: af456f1a93109b5c7a586701e777774a8c7fc398bf60c599a493bc83baa40660
 
 build:
   binary_relocation: true
