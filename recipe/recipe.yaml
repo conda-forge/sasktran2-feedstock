@@ -14,7 +14,9 @@ source:
 
 build:
   number: 0
-  skip: not (match(python, python_min ~ ".*") and is_abi3) or (build_platform != target_platform)
+  skip:
+    - not (match(python, python_min ~ ".*") and is_abi3)
+    - build_platform != target_platform
   python:
     version_independent: true
   script:
