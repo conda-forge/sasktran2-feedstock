@@ -70,6 +70,7 @@ requirements:
     - xarray
     - netcdf4
     - scipy
+    - lazy_loader
 
 tests:
   - python:
