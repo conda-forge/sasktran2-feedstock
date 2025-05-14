@@ -19,6 +19,9 @@ build:
     - build_platform != target_platform
   python:
     version_independent: true
+  script_env:
+    - PYTHONUTF8 = "1"
+    - PYTHONIOENCODING = "utf-8"
   script:
     - ${{ PYTHON }} -m pip install . -vvv
     - cd rust/sasktran2-py-ext/ && cargo-bundle-licenses --format yaml --output ../../THIRDPARTY.yml
