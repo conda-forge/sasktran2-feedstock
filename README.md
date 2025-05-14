@@ -327,6 +327,3 @@ Feedstock Maintainers
 
 * [@dannyzed](https://github.com/dannyzed/)
 
-
-<!-- dummy commit to enable rerendering -->
-
