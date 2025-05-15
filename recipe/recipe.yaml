@@ -13,7 +13,7 @@ source:
   sha256: b29281f64c43a18466d029a7ac8fc7cae1a29ceaf2237eecf6be4ef7a038ac94
 
 build:
-  number: 0
+  number: 1
   skip:
     - not (match(python, python_min ~ ".*") and is_abi3)
   python:
@@ -68,6 +68,9 @@ requirements:
     - xarray
     - netcdf4
     - scipy
+  ignore_run_exports:
+    from_package:
+      - cross-python_${{ target_platform }}
 
 tests:
   - python:
