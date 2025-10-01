@@ -1,13 +1,23 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '11.0'
+MACOSX_SDK_VERSION:
+- '11.0'
 c_compiler:
-- vs2022
+- clang
+c_compiler_version:
+- '19'
 c_stdlib:
-- vs
+- macosx_deployment_target
+c_stdlib_version:
+- '11.0'
 channel_sources:
 - conda-forge/label/rust_dev,conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- vs2022
+- clangxx
+cxx_compiler_version:
+- '19'
 is_abi3:
 - true
 libblas:
@@ -18,6 +28,8 @@ liblapack:
 - 3.9.* *netlib
 liblapacke:
 - 3.9.* *netlib
+macos_machine:
+- arm64-apple-darwin20.0.0
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -25,12 +37,17 @@ pin_run_as_build:
 python:
 - 3.10.* *_cpython
 python_min:
-- '3.9'
+- '3.10'
 rust_compiler:
 - rust
 spdlog:
 - '1.15'
 target_platform:
-- win-64
+- osx-arm64
+zip_keys:
+- - c_compiler_version
+  - cxx_compiler_version
+- - python
+  - channel_sources
 zlib:
 - '1'
