@@ -13,7 +13,7 @@ source:
   sha256: 18e208f8388c2af91f6fc73b8942ab0cbd62e46792a667c313cd30160643c102
 
 build:
-  number: 0
+  number: 1
   skip:
     - not (match(python, python_min ~ ".*") and is_abi3)
   python:
