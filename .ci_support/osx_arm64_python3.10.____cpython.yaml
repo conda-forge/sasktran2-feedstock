@@ -41,7 +41,7 @@ python_min:
 rust_compiler:
 - rust
 spdlog:
-- '1.16'
+- '1.17'
 target_platform:
 - osx-arm64
 zip_keys:
