@@ -13,7 +13,7 @@ source:
   sha256: 09712f12b6e0e1876a960d51bba6edc4d378e5fe59d80d348f566f1c63fb2f3e
 
 build:
-  number: 0
+  number: 1
   skip:
     - not (match(python, python_min ~ ".*") and is_abi3)
   python:
@@ -52,7 +52,7 @@ requirements:
     - python-abi3
     - pip
     - maturin >=1.3.2,<2
-    - eigen
+    - eigen <5
     - libblas
     - libcblas
     - liblapack
