@@ -1,6 +1,9 @@
 SET PYTHONUTF8=1
 SET PYTHONIOENCODING=utf-8
 
+:: Keep Cargo/CMake/MSBuild generated paths short on Windows
+set "CARGO_TARGET_DIR=D:\ctarget"
+
 maturin build --release
 if %ERRORLEVEL% neq 0 exit %ERRORLEVEL%
 %PYTHON% -m pip install --find-links=rust\sasktran2-py-ext\target\wheels %PKG_NAME%
