@@ -1,5 +1,5 @@
 context:
-  version: "2026.5.1"
+  version: "2026.6.0"
   python_min: '3.10'
 
 # Note: This recipe is specifically designed to work well with the autotick bot.
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/sasktran2/sasktran2-${{ version }}.tar.gz
-  sha256: 1e654980c863cd67c2a41c2edf60c0b4407d37cdaea41d4240c8b85d349d5a3b
+  sha256: b8449e4b791d0b7925b57a39dbda5bae256434b1d035e19b23edbc3ed143aec8
 
 build:
   number: 0
