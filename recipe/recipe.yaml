@@ -1,6 +1,5 @@
 context:
-  version: "2026.8.1"
-  python_min: '3.10'
+  version: "2026.9.0"
 
 # Note: This recipe is specifically designed to work well with the autotick bot.
 # Also refer to https://github.com/conda-forge/rust-feedstock/blob/main/recipe/meta.yaml.
@@ -10,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/sasktran2/sasktran2-${{ version }}.tar.gz
-  sha256: 8201da95b9e8030e47c178ebf5476d7a627375e1b558769e5314271abadf0d38
+  sha256: 5d979713ca85231e609e525b13e67c409cc9f96682cc13176ff58f456c7f050e
 
 build:
   number: 0
@@ -37,15 +36,15 @@ requirements:
     - if: unix
       then:
         - make
-    - if: build_platform == 'osx-64'
+    - if: osx
       then:
         - llvm-openmp
-    - if: build_platform == 'linux-64'
+    - if: linux
       then:
         - libgomp
     - if: build_platform == 'win-64'
       then:
-        - posix
+        - m2-base
 
   host:
     - python
@@ -68,16 +67,15 @@ requirements:
     - xarray
     - netcdf4
     - scipy
-  ignore_run_exports:
-    from_package:
-      - cross-python_${{ target_platform }}
 
 tests:
   - python:
       pip_check: true
       imports:
         - sasktran2
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - script:
       - python -c "from sasktran2 import *"
 
