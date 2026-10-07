@@ -1,5 +1,5 @@
 context:
-  version: "2026.9.0"
+  version: "2026.10.1"
 
 # Note: This recipe is specifically designed to work well with the autotick bot.
 # Also refer to https://github.com/conda-forge/rust-feedstock/blob/main/recipe/meta.yaml.
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/sasktran2/sasktran2-${{ version }}.tar.gz
-  sha256: 5d979713ca85231e609e525b13e67c409cc9f96682cc13176ff58f456c7f050e
+  sha256: 894411dd98dff2db09597b233ebafd7debbc3a0d61e7c4bc14859c61353c1b8d
 
 build:
   number: 0
